@@ -24,10 +24,19 @@ body {
 .thumbnail {
   width: 20%;
   margin: 10px;
-  height: 230px;
 }
+.thumbnail:hover {
+  background-color: #f7f4f4;
+}
+
 .thumbnail-info {
   display: flex;
+  padding: 5px;
+}
+
+.thumbnail-info > div  {
+  display: flex;
+  width: 67%;
 }
 
 .thumbnail-info:last-child span{
@@ -67,5 +76,5 @@ img:hover {
 
 select {
     margin-left: 10px;
-    width: 20px;
+    width: 30px;
 }

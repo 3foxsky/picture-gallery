@@ -11,8 +11,17 @@ export default class Pictures extends Component {
 
   renderPictureThumbnail = () => this.props.pictures
     .map((item, index) => (
-      <ModalControl item={item} index={index} component={ThumbnailPicture} {...this.props}>
-        <ThumbnailPicture className="thumbnail" {...this.props} />
+      <ModalControl
+        item={item}
+        index={index}
+        component={ThumbnailPicture}
+        {...this.props}
+      >
+        <ThumbnailPicture
+          className="thumbnail"
+          key={`${item.id}a`}
+          {...this.props}
+        />
       </ModalControl>
     ));
 
@@ -24,4 +33,3 @@ export default class Pictures extends Component {
     );
   }
 }
-

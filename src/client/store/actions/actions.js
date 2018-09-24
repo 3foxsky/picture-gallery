@@ -4,13 +4,12 @@ export const ACTION_PICTURES_LOAD_REQUEST = 'ACTION_PICTURES_LOAD_REQUEST';
 export const ACTION_PICTURES_LOAD_SUCCESS = 'ACTION_PICTURES_LOAD_SUCCESS';
 export const ACTION_PICTURES_LOAD_FAILURE = 'ACTION_PICTURES_LOAD_FAILURE';
 
-export const ACTION_UPDATE_PICTURE_RATE_REQUEST = 'ACTION_UPDATE_PICTURE_RATE_REQUEST'
 export const ACTION_UPDATE_PICTURE_RATE_SUCCESS = 'ACTION_UPDATE_PICTURE_RATE_SUCCESS';
 
 
 export function loadPicturesAction() {
   return (dispatch) => {
-    dispatch({type: ACTION_PICTURES_LOAD_REQUEST});
+    dispatch({ type: ACTION_PICTURES_LOAD_REQUEST });
     fetch(`${URL}/pictures`)
       .then(res => res.json())
       .then((res) => {
@@ -22,24 +21,23 @@ export function loadPicturesAction() {
       })
       .catch((err) => dispatch({
         type: ACTION_PICTURES_LOAD_FAILURE,
-        payload: {err}
+        payload: { err }
       }));
   };
 }
 
 export function updatePictureRate(index, value) {
   return (dispatch) => {
-    // dispatch({type: ACTION_UPDATE_PICTURE_RATE_REQUEST});
     fetch(`${URL}/update-rate`, {
       method: 'POST',
       headers: {
-        "Access-Control-Allow-Origin": "*",
-        "Content-Type": "text/plain"
+        'Access-Control-Allow-Origin': '*',
+        'Content-Type': 'text/plain'
       },
       type: 'no-cors',
       body: JSON.stringify({
-        "rate": value,
-        "index": index
+        rate: value,
+        index: index
       })
     })
       .then((res) => {
@@ -51,7 +49,6 @@ export function updatePictureRate(index, value) {
             rate: value
           }
         });
-      })
-  }
+      });
+  };
 }
-

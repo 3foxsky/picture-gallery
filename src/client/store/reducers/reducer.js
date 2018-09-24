@@ -15,14 +15,13 @@ export default (state = initState, action) => {
       return {
         ...state,
         pictures: state.pictures.map((item, index) => {
-          if(index === action.payload.index) {
-            return { ...item, rate: action.payload.rate};
+          if (index === action.payload.index) {
+            return { ...item, rate: action.payload.rate };
           }
-          return {...item};
+          return { ...item };
         })
       };
     default:
       return state;
-
   }
 };
