@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
-import ModalControl from './ModalHOC.jsx';
-import ThumbnailPicture from './ThumbnailPicture.jsx';
+import ModalControl from './ModalHOC';
+import ThumbnailPicture from './ThumbnailPicture';
 
 export default class Pictures extends Component {
 

@@ -1,7 +1,7 @@
 import { connect } from 'react-redux';
 
 import * as Actions from '../store/actions/actions';
-import Pictures from './Pictures.jsx';
+import Pictures from './Pictures';
 
 const mapStateToProps = store => ({
   ...store.Reducer
