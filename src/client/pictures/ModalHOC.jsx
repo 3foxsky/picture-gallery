@@ -38,10 +38,10 @@ export default class ModalControl extends Component {
         show={isVisible}
         onHide={hide}
       >
-        <ContentComponent
-          className="modal-picture"
-          {...this.props}
-        />
+        {ContentComponent
+          ? cloneElement(child, { item: item,  index: index, className: 'modal-thumbnail' })
+          : <ContentComponent />
+        }
       </Modal>
     ];
   }

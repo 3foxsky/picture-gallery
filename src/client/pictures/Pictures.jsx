@@ -18,7 +18,6 @@ export default class Pictures extends Component {
         {...this.props}
       >
         <ThumbnailPicture
-          className="thumbnail"
           key={`${item.id}a`}
           {...this.props}
         />

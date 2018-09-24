@@ -3,7 +3,13 @@ import { FormGroup, FormControl } from 'react-bootstrap';
 import PropTypes from 'prop-types';
 
 export default function ThumbnailPicture(props) {
-  const {item, index, onClick, className, updatePictureRate} = props;
+  const {
+    item,
+    index,
+    onClick,
+    className = 'thumbnail',
+    updatePictureRate
+  } = props;
   return (
     <div className={className} onClick={onClick}>
       <img src={item.url} key={item.id} alt={index} />
