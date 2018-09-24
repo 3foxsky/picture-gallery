@@ -1,5 +1,6 @@
 import React from 'react';
 import { FormGroup, FormControl } from 'react-bootstrap';
+import PropTypes from 'prop-types';
 
 export default function ThumbnailPicture(props) {
   const {item, index, onClick, className, updatePictureRate} = props;
@@ -33,4 +34,12 @@ export default function ThumbnailPicture(props) {
       </div>
     </div>
   );
+}
+
+ThumbnailPicture.propTypes = {
+  index: PropTypes.number,
+  onClick: PropTypes.func,
+  updatePictureRate: PropTypes.func.isRequired,
+  item: PropTypes.instanceOf(Object),
+  className: PropTypes.string.isRequired,
 }
