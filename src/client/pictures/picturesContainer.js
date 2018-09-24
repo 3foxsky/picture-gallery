@@ -1,9 +1,9 @@
-import * as Actions from '../store/actions/actions';
-
-import Pictures from './Pictures.jsx';
 import { connect } from 'react-redux';
 
-const mapStateToProps = (store) => ({
+import * as Actions from '../store/actions/actions';
+import Pictures from './Pictures.jsx';
+
+const mapStateToProps = store => ({
   ...store.Reducer
 });
 

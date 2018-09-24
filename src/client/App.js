@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import './app.css';
 
 import PicturesContainer from './pictures/picturesContainer';

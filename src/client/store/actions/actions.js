@@ -1,4 +1,4 @@
-const URL = 'http://localhost:8080'
+const URL = 'http://localhost:8080';
 
 export const ACTION_PICTURES_LOAD_REQUEST = 'ACTION_PICTURES_LOAD_REQUEST';
 export const ACTION_PICTURES_LOAD_SUCCESS = 'ACTION_PICTURES_LOAD_SUCCESS';
@@ -19,7 +19,7 @@ export function loadPicturesAction() {
           payload: { pictures: data }
         });
       })
-      .catch((err) => dispatch({
+      .catch(err => dispatch({
         type: ACTION_PICTURES_LOAD_FAILURE,
         payload: { err }
       }));
@@ -40,8 +40,7 @@ export function updatePictureRate(index, value) {
         index: index
       })
     })
-      .then((res) => {
-        console.log(res)
+      .then(() => {
         dispatch({
           type: ACTION_UPDATE_PICTURE_RATE_SUCCESS,
           payload: {
